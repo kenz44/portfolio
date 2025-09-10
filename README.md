@@ -1,7 +1,7 @@
 HTML, CSS, JavaScript Portfolio Website
 =======
 # Current Deployment #
-The current version of the portfolio is deployed using Firebase on Google Cloud.
+The current version of the portfolio is deployed using Firebase on Google Cloud. <br />
 [Live Demo](https://portfolio-site-570fc.web.app/)
 
 # Initial Deployment #
