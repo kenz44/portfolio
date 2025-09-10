@@ -1,83 +1,220 @@
-.navbar-brand {
-    color: white;
-}
-
-/* hero background image */
-.bgimage {
-    height:100vh;
-    background: url('images/lights.CR2');
-    background-size:cover;
-    position:relative;
-}
-
-/* text css above hero image*/
-.hero_title {
-    font-size: 4.5rem;
-}
-.hero_desc {
-    font-size: 2rem;
-}
-.hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-/* about section image css */
-.imageAboutPage {
-    width: 100%;
-}
-
-/* services section css */
-.servicesText.card {
-    height: 280px;
-    cursor: pointer;
-  }
-.servicesIcon {
-    font-size: 36px;
-    text-align: center;
-    width: 100%;
-}
-.card-title {
-    text-align: center;
-}
-.card:hover .servicesIcon {
-    color: #00C19E;
-}
-.servicesText:hover {
-    border: 1px solid #00C19E;
-}
-
-/* display background color black on navbar scroll */
+/* -------------------
+    navbar
+   ------------------- */ 
 .navbarScroll.navbarDark {
-    background-color: #00C19E;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* social media icons styling */
-.social-icons {
+.navbar-brand,
+.navbar a.nav-link {
+    color: #442d1c;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.navbar-brand:hover,
+.navbar a.nav-link:hover,
+.social-icons i:hover {
+    color: black;
+}
+
+.social-icons i {
+    color: #442d1c;
     font-size: 36px;
     cursor: pointer;
 }
-.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-github:hover {
-    color: black;
-}
-.fab {
-    color: black;
-}
-/* footer styling */
-#footer {
-    background-color: #00C19E;
-    text-align: center;
+
+/* -------------------
+    home section
+   ------------------- */ 
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to bottom, #743014 0%, #e8d1a7 100%);
 }
 
-/* spacing on all sections */
-#about, #work, #leadership, #projects {
-    margin-top: 2rem;
-    padding-top: 2rem;
+.hero-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 5%;
+    color: #442d1c;
 }
-#projects {
-    padding-bottom: 6rem;
+
+.hero-image {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5%;
+}
+
+.hero-image img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 400px;
+    width: 330px;
+}
+
+.hero_title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #442d1c;
+}
+
+.hero_desc {
+    font-size: 1.5rem;
+    color: #442d1c;
+}
+
+/* -------------------
+    about section
+   ------------------- */ 
+
+#about .about-text {
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e8d1a7;
+}
+
+#about .about-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .about-images img {
+    width: 250px;         
+    height: auto;         
+    border-radius: 12px;  
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+#about .about-images img:hover {
+    transform: scale(1.05);
+}
+
+/* -------------------
+    sections general
+   ------------------- */ 
+
+#projects, #work, #about {
+    background-color: #e8d1a7;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* -------------------
+    section cards
+   ------------------- */ 
+section .card-section {
+    border-radius: 15px;
+    padding: 40px 40px;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    background-color: #9d9167;
+    color: #442d1c;
+    min-height: 90vh;
+    border: 20px solid #84592b;
+}
+
+/* footer Card */
+#footer {
+    background-color: #743014;
+    color: #e8d1a7;
+    text-align: center;
+    padding: 1px;
+}
+
+/* -------------------
+    cards 
+   ------------------- */ 
+
+.job-card, 
+.project-card {
+    background-color: #e8d1a7;
+    border-left: 5px solid #442d1c;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.job-card:hover,
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+}
+
+.job-title,
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #442d1c;
+}
+
+.job-company {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #442d1c;
+    margin-bottom: 15px;
+}
+
+.job-description,
+.project-text {
+    font-size: 1rem;
+    color: #442d1c;
+    line-height: 1.6;
+}
+
+/* -------------------
+    card btn, img, video 
+   ------------------- */ 
+.project-card .btn-success {
+    margin-top: 1rem;
+    font-weight: 500;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    background-color: #442d1c;
+    color: #e8d1a7;
+}
+.project-card .btn-success:hover {
+    background-color: #442d1c;
+}
+
+.project-images,
+.project-videos {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.project-images img,
+.project-videos video {
+    width: 48%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.project-images img:hover,
+.project-videos video:hover {
+    transform: scale(1.05);
 }
